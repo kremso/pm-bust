@@ -5,8 +5,8 @@ pm-bust is a simple wrapper around pm-hibernate to detect and warn you about thi
 Installation
 ------------
 
-sudo mv /usr/sbin/{pm-hibernate,pm-hibernate-original}
-sudo ln -s pm-bust/pm-hibernate /usr/sbin/pm-hibernate
+    sudo mv /usr/sbin/{pm-hibernate,pm-hibernate-original}
+    sudo ln -s pm-bust/pm-hibernate /usr/sbin/pm-hibernate
 
 
 Pro tip
@@ -16,5 +16,5 @@ If you hibernate with a hotkey, bind it to `pm-hibernate -gui` - you'll get a gt
 
 Uninstallation
 --------------
-sudo rm /usr/sbin/pm-hibernate
-sudo mv /usr/sbin/{pm-hibernate-original,pm-hibernate}
+    sudo rm /usr/sbin/pm-hibernate
+    sudo mv /usr/sbin/{pm-hibernate-original,pm-hibernate}
