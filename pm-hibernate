@@ -16,11 +16,14 @@ if [ -f ~/.pm-bust ]; then
 
     if [ "$shutdown" == "y" ]; then
       echo "Shutting down.."
+      halt
     fi
 
     exit 0
   fi
 fi
 
-#touch ~/.pm-bust
+touch ~/.pm-bust
+
 echo "Hibernating.."
+pm-hibernate-original
