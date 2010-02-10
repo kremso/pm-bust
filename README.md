@@ -5,16 +5,21 @@ pm-bust is a simple wrapper around pm-hibernate to detect and warn you about thi
 Installation
 ------------
 
-    sudo mv /usr/sbin/{pm-hibernate,pm-hibernate-original}
-    sudo ln -s pm-bust/pm-hibernate /usr/sbin/pm-hibernate
+    echo "touch /var/run/pm-bust" >> /etc/rc.local
+    sudo ln -s pm-bust/pm-hibernate /usr/sbin/hibernate
 
+
+Do not rename the original pm-hibernate - it's a symlink to a shell script which depends on it's name.
 
 Pro tip
 -------
 
-If you hibernate with a hotkey, bind it to `pm-hibernate -gui` - you'll get a gtk dialog window
+If you hibernate with a hotkey, bind it to `hibernate -gui` - you'll get a gtk dialog window
+
+Optional dependencies
+-------------
+`zenity` or `xdialog` for GUI.
 
 Uninstallation
 --------------
-    sudo rm /usr/sbin/pm-hibernate
-    sudo mv /usr/sbin/{pm-hibernate-original,pm-hibernate}
+    sudo rm /usr/sbin/hibernate
